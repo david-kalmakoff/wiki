@@ -20,22 +20,22 @@ In the video he mentions these topics:
 
 - [Time complexity of algorithms](/algorithms)
   - Sorting algorithms
-- [Programming paradigms](/paradigms)
+- [Programming paradigms](/paradigms) -> find resources
   - Functional
   - Imperative
   - Declarative
-- [Recursion](/recursion)
-- [Boolean logic](/booleans)
-- [Operating systems](/operating_systems)
+- [Recursion](/recursion) -> find resources
+- [Boolean logic](/booleans) -> find resources
+- [Operating systems](/operating_systems) -> find resources
 - [Data structures](/data_structures)
   - How they live in memory
   - Binary tree
-- [Floating point numbers](/floats)
-- [Concurrency](/concurrency)
+- [Floating point numbers](/floats) -> find resources
+- [Concurrency](/concurrency) -> find resources
   - Data races
   - Databases
     - Data normalization
-- [Implement malloc](/malloc)
+- [Implement malloc](/malloc) -> find resources
 - [Linear Algebra](/linear_algebra)
 
 ## Other Learning
