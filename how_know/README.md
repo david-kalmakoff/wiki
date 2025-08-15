@@ -6,11 +6,11 @@ Logic gates are electrical components that make up a computer, they exist in the
 
 The simplest of the gates is the NAND gate. It has 2 inputs and one output. The output is always on, unless both inputs are on, then it is off.
 
-![NAND Gate](https://en.wikipedia.org/wiki/File:NAND_ANSI_Labelled.svg)
+![NAND Gate](https://media.rs-online.com/image/upload/w_620,h_413,c_crop,c_pad,b_white,f_auto,q_auto/dpr_auto/v1482269960/R0442892-03.jpg)
 
 The AND gate is a combination of a NAND gate and a NOT gate. I is always off, unless both inputs are on, then it is on.
 
-![AND Gate](https://en.wikipedia.org/wiki/File:AND_ANSI.svg)
+![AND Gate](https://media.rs-online.com/image/upload/w_620,h_413,c_crop,c_pad,b_white,f_auto,q_auto/dpr_auto/v1482269874/R2175566-03.jpg)
 
 ## Bit
 
