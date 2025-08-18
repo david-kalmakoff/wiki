@@ -49,7 +49,7 @@ An enabler is a byte in-front of another byte that decides when the output will 
 
 ![Enabler](/how_know/imgs/enabler.png)
 
-![Ram Register](/how_know/imgs/ram register.png)
+![Ram Register](/how_know/imgs/ram_register.png)
 
 ## Bus
 
@@ -59,10 +59,10 @@ A bus is a bundle of 8 wires connecting register inputs and outputs.
 
 The number of outputs of a decoder are equal to the number of possible different input options that are available (2x4, 3x8, 4x16, 5x32, 6x64).
 
-![4x16 Decoder](/how_know/imgs/4x16 decoder.png)
+![4x16 Decoder](/how_know/imgs/4x16_decoder.png)
 
-![Ram Register 16](/how_know/imgs/ram register 16.png)
+![Ram Register 16](/how_know/imgs/ram_register_16.png)
 
-![Ram Register 256](/how_know/imgs/ram register 256.png)
+![Ram Register 256](/how_know/imgs/ram_register_256.png)
 
-![256 Bytes Ram](/how_know/imgs/256bytes ram.png)
+![256 Bytes Ram](/how_know/imgs/256bytes_ram.png)
