@@ -6,7 +6,9 @@ I found this simulator to allow me reproduce the circuits shown in the book.
 
 [Digital Logic Sim](https://github.com/SebLague/Digital-Logic-Sim)
 
-## Logic Gates
+## First half of the computer
+
+### Logic gates
 
 Logic gates are electrical components that make up a computer, they exist in the silicon chips and other components.
 
@@ -26,7 +28,7 @@ AND gates can be combined together to require more inputs
 
 ![4AND Gate](./imgs/4and.png)
 
-## Bit
+### Bit
 
 Bits are built from NAND gates. There are 2 inputs and one output. The first input is the state we want to capture. The second input is the selector.
 
@@ -34,7 +36,7 @@ When the selector is switched on, the state of the first input is captured. When
 
 ![Bit of Memory](./imgs/memory.png)
 
-## Bits, Nibbles, Bytes
+### Bits, Nibbles, Bytes
 
 Bits make up the memory of the system.
 
@@ -44,25 +46,25 @@ Bytes can be used to represent data such as [ASCII](https://en.wikipedia.org/wik
 
 ![Byte of Memory](./imgs/byte.png)
 
-## Register
+### Register
 
-### Enabler
+#### Enabler
 
 An enabler is a byte in-front of another byte that decides when the output will be made available.
 
 ![Enabler](./imgs/enabler.png)
 
-### Register
+#### Register
 
 A register is a combination of a byte and an enabler.
 
 ![Register](./imgs/register.png)
 
-## Bus
+### Bus
 
 A bus is a bundle of 8 wires connecting register inputs and outputs.
 
-## Decoder
+### Decoder
 
 The number of outputs of a decoder are equal to the number of possible different input options that are available (2x4, 3x8, 4x16, 5x32, 6x64).
 
@@ -70,36 +72,128 @@ This 4x16 decoder is what is used for our ram to indicate a column or row to act
 
 ![4x16 Decoder](./imgs/4x16_decoder.png)
 
-## Ram
+### Ram
 
-### Ram Register
+#### Ram Register
 
 This is what exists at every point in the ram grid.
 
 ![Ram Register](./imgs/ram_register.png)
 
-### 16 Ram Registers in Column
+#### 16 Ram Registers in Column
 
-This is a column of 16 ram registers
+This is a column of 16 ram storage locations.
 
 ![Ram Register 16](./imgs/ram_register_16.png)
 
-### 16 Ram Registers Columns
+#### 16 Ram Registers Columns
 
-This is a row of 16 ram columns built above.
+This is a row of 16 storage locations columns built above.
 
 ![Ram Register 256](./imgs/ram_register_256.png)
 
-### 256 Bytes Ram
+#### 256 Bytes Ram
 
-This ram has an 8 bit register to indicate which of the 256 registers to read/write from/to.
+This ram has an 8 bit register (Memory Address Register / MAR) to indicate which of the 256 locations to read/write from/to.
 
-That register is broken down with 2 decoders for the X and Y axis' of the register grid.
+The MAR is broken down with 2 decoders for the X and Y axis' of the storage location grid.
 
-There is a enable input to allow for reading from a register and a set button to allow for writing to a register.
+There is an enable input to allow for reading from a location and a set button to allow for writing to a location.
 
 ![256 Bytes Ram](./imgs/256bytes_ram.png)
 
-This is an example of the ram being used. Here we are reading the register from the 0x04 address.
+This is an example of the ram being used. Here we are reading the memory stored at the 0x04 address.
 
 ![Ram Example](./imgs/ram_use.png)
+
+## Other half of the computer
+
+### OR Gate
+
+OR gates are on if either or both inputs are on.
+
+![OR Gate](./imgs/or.png)
+
+XOR gate are only on if one of the inputs are on, it is off if both are on.
+
+### XOR Gate
+
+![XOR Gate](./imgs/xor.png)
+
+### Shifters
+
+Shifter shift the bytes in a register over in one direction.
+
+#### Left Shifter
+
+The left shifter shifts bytes left ie. `0000 1100` (12) becomes `0001 1000` (24). Multiplying the value by 2.
+
+![Left Shifter](./imgs/left_shifter.png)
+
+#### Right Shifter
+
+The right shifter shifts bytes right ie. `0000 1100` (12) becomes `0000 0110` (6). Dividing the value by 2.
+
+![Right Shifter](./imgs/right_shifter.png)
+
+### NOTer (Inverter)
+
+The inverter flip the bits to the opposite.
+
+![Inverter](./imgs/inverter.png)
+
+### ANDer
+
+The ANDer takes 2 input bytes and ANDs each bit.
+
+![ANDer](./imgs/ander.png)
+
+### ORer
+
+The ORer takes 2 input bytes and ORs each bit.
+
+![ORer](./imgs/orer.png)
+
+### XORer
+
+The XORer takes 2 input bytes and XORs each bit.
+
+![XORer](./imgs/xorer.png)
+
+### ADDERS
+
+#### ADDER 2 bit
+
+Takes in 2 bits and outputs a SUM and a CARRY.
+
+![ADDER 2 bit](./imgs/adder_2bit.png)
+
+#### ADDER 3 bit
+
+Takes in 3 bits and outputs a SUM and a CARRY.
+
+![ADDER 3 bit](./imgs/adder_3bit.png)
+
+#### ADDER 8 bit
+
+Takes in 2 bytes and a CARRY IN then outputs a SUM byte and a CARRY OUT.
+
+![ADDER 8 bit](./imgs/adder_8bit.png)
+
+### Comparator
+
+Comparators take 2 inputs and output whether or not they are equal and if a is larger than b. It also outputs an XOR result.
+
+#### Comparator 1 bit
+
+![Comparator 1 bit](./imgs/comparator_1_bit.png)
+
+#### Comparator 8 bit
+
+![Comparator 8 bit](./imgs/comparator_8_bit.png)
+
+### Zero
+
+The Zero takes a byte and outputs a bit that is only on when all bits in the input are zero.
+
+![Zero](./imgs/zero.png)
