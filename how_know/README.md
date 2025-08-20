@@ -8,5 +8,5 @@ I found this simulator to allow me reproduce the circuits shown in the book.
 
 ## Chapters
 
-- [Chapter 1][./Chapter_1.md]
-- [Chapter 2][./Chapter_2.md]
+- [Chapter 1](./Chapter_1.md)
+- [Chapter 2](./Chapter_2.md)
