@@ -47,7 +47,7 @@ These are other things I am interested in learning from:
 **I have loosely ordered these in the order I would like to go through them.**
 
 - [But How Do It Know?](/how_know) -> completed
-- [RISC-V Assembly Language](/risc_v) -> in progress
+- [RISC-V Assembly Programming](/risc_v) -> in progress
 - [Writing An Interpreter In Go](/interpreter_go) -> in progress
 - [Writing A Compiler In Go](/compiler_go)
 - [The C Programming Language](/c_lang)
