@@ -74,8 +74,36 @@ If the first bit of our IR is 0, this is a load and store instruction.
 
 011 - Set IAR to value of RB
 
-![Jump](./imgs/jump.png)
+![Jump Register](./imgs/jump.png)
 
 ### Jump
 
 100 - Set IAR to the ram address of the next byte.
+
+![Jump](./imgs/jumpp.png)
+
+### Jump If
+
+101 - Jump if we get an expected output from one of the flags.
+
+![Jump If](./imgs/jump_if.png)
+
+### Clear Flags
+
+110 - Clear the currently set flags
+
+## IO
+
+IO gets connected to the main bus and has some other connections to enable or set on the IO device.
+
+### Display
+
+A display has it's own set of ram with separated ready and write operations. The read operations are only available to the display it's self, and the write operations are available to the computer. The computer sets the display ram to what it should display and the display scans through the ram to update the pixels.
+
+### Drives
+
+Drives have to move the head to specific locations and read entire blocks out. It sends these block byte by byte through the bus to the CPU for it to load it from the registers to RAM for any operations is whats to do on it.
+
+## Rest of book
+
+The rest of the book gives an overview of different peripherals and philosophies.

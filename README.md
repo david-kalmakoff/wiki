@@ -18,31 +18,36 @@ https://www.youtube.com/watch?v=I0s1MXRxPLw
 
 In the video he mentions these topics:
 
+**I have loosely ordered these in the order I would like to go through them.**
+
+- [Linear Algebra](/linear_algebra)
 - [Time complexity of algorithms](/algorithms)
   - Sorting algorithms
+- [Data structures](/data_structures)
+  - How they live in memory
+  - Binary tree
+- [Boolean logic](/booleans) -> find resources
+- [Floating point numbers](/floats) -> find resources
 - [Programming paradigms](/paradigms) -> find resources
   - Functional
   - Imperative
   - Declarative
 - [Recursion](/recursion) -> find resources
-- [Boolean logic](/booleans) -> find resources
-- [Operating systems](/operating_systems) -> find resources
-- [Data structures](/data_structures)
-  - How they live in memory
-  - Binary tree
-- [Floating point numbers](/floats) -> find resources
 - [Concurrency](/concurrency) -> find resources
   - Data races
   - Databases
     - Data normalization
 - [Implement malloc](/malloc) -> find resources
-- [Linear Algebra](/linear_algebra)
+- [Operating systems](/operating_systems) -> find resources
 
 ## Other Learning
 
 These are other things I am interested in learning from:
 
-- [But How Do It Know?](/how_know) -> in progress
+**I have loosely ordered these in the order I would like to go through them.**
+
+- [But How Do It Know?](/how_know) -> completed
+- [RISC-V Assembly Language](/risc_v) -> in progress
 - [Writing An Interpreter In Go](/interpreter_go) -> in progress
 - [Writing A Compiler In Go](/compiler_go)
 - [The C Programming Language](/c_lang)

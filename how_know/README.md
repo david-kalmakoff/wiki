@@ -1,5 +1,7 @@
 # But How Do It Know? - The Basic Principles of Computers for Everyone
 
+[Book - Amazon](https://www.amazon.ca/But-How-Know-Principles-Computers/dp/0615303765)
+
 ## Simulator
 
 I found this simulator to allow me reproduce the circuits shown in the book.
