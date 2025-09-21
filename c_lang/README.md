@@ -1,5 +1,3 @@
-# The C Programming Language
+# C Fundamentals
 
-https://www.amazon.ca/gp/product/9332549443?psc=1
-
-https://www.youtube.com/watch?v=PaPN51Mm5qQ
+https://frontendmasters.com/courses/c-fundamentals/
