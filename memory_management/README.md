@@ -1,3 +1,5 @@
 # C Programming and Memory Management
 
-https://www.youtube.com/watch?v=PaPN51Mm5qQ
+## Boot Dev Video
+
+https://www.youtube.com/watch?v=rJrd2QMVbGM

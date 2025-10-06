@@ -38,7 +38,7 @@ In the video he mentions these topics:
   - Databases
     - Data normalization
 - [Implement malloc](/malloc) -> find resources
-- [Operating systems](/operating_systems) -> find resources
+- [Operating systems](/operating_systems)
 
 ## Other Learning
 
@@ -47,9 +47,9 @@ These are other things I am interested in learning from:
 **I have loosely ordered these in the order I would like to go through them.**
 
 - [But How Do It Know?](/how_know) -> completed
-- [RISC-V Assembly Programming](/risc_v) -> on hold
-- [Writing An Interpreter In Go](/interpreter_go) -> in progress
-- [Writing A Compiler In Go](/compiler_go)
-- [C Fundamentals](/c_lang)
+- [C Fundamentals](/c_lang) -> completed
 - [Handmade Hero](/handmade_hero) -> in progress
-- [C Programming and Memory Management](/memory_management)
+- [Memory Allocation](/memory_allocation) -> completed
+- [C Programming and Memory Management](/memory_management) -> in progress
+- [Machine Learning](/machine_learning) -> in progress
+- [Crafting Interpreters](/interpreter)
