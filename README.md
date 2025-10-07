@@ -46,10 +46,16 @@ These are other things I am interested in learning from:
 
 **I have loosely ordered these in the order I would like to go through them.**
 
-- [But How Do It Know?](/how_know) -> completed
-- [C Fundamentals](/c_lang) -> completed
-- [Handmade Hero](/handmade_hero) -> in progress
-- [Memory Allocation](/memory_allocation) -> completed
-- [C Programming and Memory Management](/memory_management) -> in progress
-- [Machine Learning](/machine_learning) -> in progress
+- [x] [But How Do It Know?](/how_know) -> completed
+- [x] [C Fundamentals](/c_lang) -> completed
+- [ ] [Handmade Hero](/handmade_hero) -> in progress
+- [x] [Memory Allocation](/memory_allocation) -> completed
+- [ ] [C Programming and Memory Management](/memory_management) -> in progress
+- [ ] [Machine Learning](/machine_learning) -> in progress
 - [Crafting Interpreters](/interpreter)
+
+## Legend
+
+- means it has not been started yet
+- [ ] means it is in progress
+- [x] means it has been completed
