@@ -6,14 +6,43 @@
 
 float sigmoidf(float x) { return 1.f / (1.f + expf(-x)); }
 
+typedef float sample[3];
+
 // OR-gate
-float train[][3] = {
+float or_train[][3] = {
     {0, 0, 0},
     {1, 0, 1},
     {0, 1, 1},
     {1, 1, 1},
 };
-#define train_count (sizeof(train) / sizeof(train[0]))
+
+// AND-gate
+float and_train[][3] = {
+    {0, 0, 0},
+    {1, 0, 0},
+    {0, 1, 0},
+    {1, 1, 1},
+};
+
+// NAND-gate
+float nand_train[][3] = {
+    {0, 0, 1},
+    {1, 0, 1},
+    {0, 1, 1},
+    {1, 1, 0},
+};
+
+// XOR-gate
+float xor_train[][3] = {
+    {0, 0, 0},
+    {1, 0, 1},
+    {0, 1, 1},
+    {1, 1, 0},
+};
+
+sample *train = or_train;
+
+size_t train_count = 4;
 
 // 1 000 000 000 000 => GPT-4
 // 1 => us
@@ -35,6 +64,14 @@ float cost(float w1, float w2, float b) {
 
 int main() {
 
+  /* for (size_t x = 0; x < 2; x++) { */
+  /*   for (size_t y = 0; y < 2; y++) { */
+  /*     printf("%zu ^ %zu = %zu\n", x, y, (x | y) & ~(x & y)); */
+  /*   } */
+  /* } */
+  /**/
+  /* return 0; */
+
   srand(time(0)); // seed the random number generator
 
   float w1 = rand_float();
@@ -47,7 +84,6 @@ int main() {
   for (size_t i = 0; i < 1000 * 1000; i++) {
     float c = cost(w1, w2, b);
     /* printf("w1 = %f, w2 = %f, b = %f, c = %f\n", w1, w2, b, c); */
-    printf("%f\n", c);
 
     float dw1 = (cost(w1 + eps, w2, b) - c) / eps;
     float dw2 = (cost(w1, w2 + eps, b) - c) / eps;
@@ -57,14 +93,14 @@ int main() {
     b -= rate * db;
   }
 
-  float c = cost(w1, w2, b);
+  /* float c = cost(w1, w2, b); */
   /* printf("w1 = %f, w2 = %f, b = %f, c = %f\n", w1, w2, b, c); */
 
-  /* for (size_t i = 0; i < 2; ++i) { */
-  /*   for (size_t j = 0; j < 2; ++j) { */
-  /*     printf("%zu | %zu = %f\n", i, j, sigmoidf(i * w1 + j * w2 + b)); */
-  /*   } */
-  /* } */
+  for (size_t i = 0; i < 2; ++i) {
+    for (size_t j = 0; j < 2; ++j) {
+      printf("%zu | %zu = %f\n", i, j, sigmoidf(i * w1 + j * w2 + b));
+    }
+  }
 
   return 0;
 }

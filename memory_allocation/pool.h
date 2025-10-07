@@ -1,13 +1,29 @@
-#include "memory.h"
-#include <stddef.h>
-#include <stdint.h>
-
+#ifndef MEMORY_POOL_H_
 /*
  * Pool Allocator
  *
  * https://www.gingerbill.org/article/2019/02/16/memory-allocation-strategies-004/
  *
  */
+#define MEMORY_POOL_H_
+
+#include "core.h"
+#include <cstring>
+#include <sys/mman.h>
+
+typedef struct PoolFreeNode PoolFreeNode;
+
+typedef struct PoolFreeNode {
+  PoolFreeNode *next;
+} PoolFreeNode;
+
+typedef struct {
+  unsigned char *buf;
+  size_t buf_len;
+  size_t chunk_size;
+
+  PoolFreeNode *head;
+} Pool;
 
 void pool_free(Pool *p, void *ptr) {
   PoolFreeNode *node;
@@ -101,3 +117,5 @@ void *pool_alloc(Pool *p) {
   // Zero the memory by default
   return memset(node, 0, p->chunk_size);
 }
+
+#endif // MEMORY_POOL_H_

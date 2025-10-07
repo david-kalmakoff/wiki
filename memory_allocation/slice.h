@@ -1,4 +1,14 @@
-#include "memory.h"
+#ifndef MEMORY_SLICE_H_
+#define MEMORY_SLICE_H_
+
+#include "arena.h"
+
+typedef struct {
+  Arena *arena;
+  void **data;
+  size_t size;
+  size_t capacity;
+} Slice;
 
 Slice create_slice(Arena *arena) {
   int capacity = 8;
@@ -6,8 +16,8 @@ Slice create_slice(Arena *arena) {
   a.arena = arena;
   a.size = 0;
   a.capacity = capacity;
-  a.data = arena_alloc(arena, (sizeof *a.data) * capacity);
-  assert(a.data != NULL);
+  a.data = (void **)arena_alloc(arena, (sizeof *a.data) * capacity);
+  MEMORY_ASSERT(a.data != NULL);
   return a;
 }
 
@@ -15,9 +25,9 @@ void resize_slice(Slice *a, size_t capacity) {
   void *new_data =
       arena_resize(a->arena, a->data, (sizeof *a->data) * a->capacity,
                    (sizeof *a->data) * capacity);
-  assert(new_data != NULL);
+  MEMORY_ASSERT(new_data != NULL);
 
-  a->data = new_data;
+  a->data = (void **)new_data;
   a->capacity = capacity;
 }
 
@@ -44,3 +54,4 @@ void *slice_get(Slice *a, int index) {
   }
   return a->data[index];
 }
+#endif // MEMORY_SLICE_H_

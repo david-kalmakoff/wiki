@@ -1,5 +1,4 @@
-#include "memory.h"
-
+#ifndef MEMORY_ARENA_H_
 /*
  * Arena Allocator
  *
@@ -7,9 +6,24 @@
  *
  */
 
-// ============================================================================
-// Arena
-// ============================================================================
+#define MEMORY_ARENA_H_
+
+#include "core.h"
+#include <string.h>
+#include <sys/mman.h>
+
+typedef struct {
+  unsigned char *buf;
+  size_t buf_len;
+  size_t prev_offset;
+  size_t curr_offset;
+} Arena;
+
+typedef struct {
+  Arena *arena;
+  size_t prev_offset;
+  size_t curr_offset;
+} TempArena;
 
 void *arena_alloc_align(Arena *a, size_t size, size_t align) {
   // Alight 'curr_offset' forward to specific alignment
@@ -135,3 +149,5 @@ void temp_arena_end(TempArena temp) {
   temp.arena->prev_offset = temp.prev_offset;
   temp.arena->curr_offset = temp.curr_offset;
 }
+
+#endif // MEMORY_ARENA_H_
